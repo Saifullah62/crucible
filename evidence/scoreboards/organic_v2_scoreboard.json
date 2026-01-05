@@ -1,0 +1,208 @@
+{
+  "eval_header": {
+    "_header": true,
+    "source_bundles": "/root/QUANTUM_BWD/paradigm_factory/v2/bundles_v23/tier3_organic_holdout.jsonl",
+    "eval_count": 260,
+    "tier_counts": {
+      "tier3_adversarial": 260
+    }
+  },
+  "eval_path": "/root/QUANTUM_BWD/evals/organic_holdout_v2_eval.jsonl",
+  "device": "cuda",
+  "capsules": [
+    {
+      "condition": "S10000",
+      "seed": 123,
+      "capsule_dir": "/root/QUANTUM_BWD/results/step_sweep/S10000/seed_123",
+      "overall": {
+        "n": 260,
+        "correct": 80,
+        "accuracy": 0.3076923076923077,
+        "mean_margin": -0.0014099856981864343,
+        "mean_rank": 2.4,
+        "median_margin": -0.0016032755374908447,
+        "pass_rate": 0.3076923076923077,
+        "q10_margin": -0.005823928117752075,
+        "q90_margin": 0.0025229930877685544
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 260,
+          "correct": 80,
+          "accuracy": 0.3076923076923077,
+          "mean_margin": -0.0014099856981864343,
+          "mean_rank": 2.4,
+          "median_margin": -0.0016032755374908447,
+          "pass_rate": 0.3076923076923077,
+          "q10_margin": -0.005823928117752075,
+          "q90_margin": 0.0025229930877685544
+        }
+      }
+    },
+    {
+      "condition": "S10000",
+      "seed": 42,
+      "capsule_dir": "/root/QUANTUM_BWD/results/step_sweep/S10000/seed_42",
+      "overall": {
+        "n": 260,
+        "correct": 84,
+        "accuracy": 0.3230769230769231,
+        "mean_margin": -0.001395064821610084,
+        "mean_rank": 2.3384615384615386,
+        "median_margin": -0.0012336969375610352,
+        "pass_rate": 0.3230769230769231,
+        "q10_margin": -0.0072917938232421875,
+        "q90_margin": 0.0025722682476043697
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 260,
+          "correct": 84,
+          "accuracy": 0.3230769230769231,
+          "mean_margin": -0.001395064821610084,
+          "mean_rank": 2.3384615384615386,
+          "median_margin": -0.0012336969375610352,
+          "pass_rate": 0.3230769230769231,
+          "q10_margin": -0.0072917938232421875,
+          "q90_margin": 0.0025722682476043697
+        }
+      }
+    },
+    {
+      "condition": "S20000",
+      "seed": 123,
+      "capsule_dir": "/root/QUANTUM_BWD/results/step_sweep/S20000/seed_123",
+      "overall": {
+        "n": 260,
+        "correct": 75,
+        "accuracy": 0.28846153846153844,
+        "mean_margin": -0.001533749011846689,
+        "mean_rank": 2.376923076923077,
+        "median_margin": -0.0016089379787445068,
+        "pass_rate": 0.28846153846153844,
+        "q10_margin": -0.005444467067718506,
+        "q90_margin": 0.0026408553123474115
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 260,
+          "correct": 75,
+          "accuracy": 0.28846153846153844,
+          "mean_margin": -0.001533749011846689,
+          "mean_rank": 2.376923076923077,
+          "median_margin": -0.0016089379787445068,
+          "pass_rate": 0.28846153846153844,
+          "q10_margin": -0.005444467067718506,
+          "q90_margin": 0.0026408553123474115
+        }
+      }
+    },
+    {
+      "condition": "S20000",
+      "seed": 42,
+      "capsule_dir": "/root/QUANTUM_BWD/results/step_sweep/S20000/seed_42",
+      "overall": {
+        "n": 260,
+        "correct": 73,
+        "accuracy": 0.28076923076923077,
+        "mean_margin": -0.0021167117815751296,
+        "mean_rank": 2.3846153846153846,
+        "median_margin": -0.0022792816162109375,
+        "pass_rate": 0.28076923076923077,
+        "q10_margin": -0.009503161907196044,
+        "q90_margin": 0.003749704360961914
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 260,
+          "correct": 73,
+          "accuracy": 0.28076923076923077,
+          "mean_margin": -0.0021167117815751296,
+          "mean_rank": 2.3846153846153846,
+          "median_margin": -0.0022792816162109375,
+          "pass_rate": 0.28076923076923077,
+          "q10_margin": -0.009503161907196044,
+          "q90_margin": 0.003749704360961914
+        }
+      }
+    },
+    {
+      "condition": "S5000",
+      "seed": 123,
+      "capsule_dir": "/root/QUANTUM_BWD/results/step_sweep/S5000/seed_123",
+      "overall": {
+        "n": 260,
+        "correct": 82,
+        "accuracy": 0.3153846153846154,
+        "mean_margin": -0.0009836852550506592,
+        "mean_rank": 2.373076923076923,
+        "median_margin": -0.0010919570922851562,
+        "pass_rate": 0.3153846153846154,
+        "q10_margin": -0.004494434595108033,
+        "q90_margin": 0.0021886408329009972
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 260,
+          "correct": 82,
+          "accuracy": 0.3153846153846154,
+          "mean_margin": -0.0009836852550506592,
+          "mean_rank": 2.373076923076923,
+          "median_margin": -0.0010919570922851562,
+          "pass_rate": 0.3153846153846154,
+          "q10_margin": -0.004494434595108033,
+          "q90_margin": 0.0021886408329009972
+        }
+      }
+    },
+    {
+      "condition": "S5000",
+      "seed": 42,
+      "capsule_dir": "/root/QUANTUM_BWD/results/step_sweep/S5000/seed_42",
+      "overall": {
+        "n": 260,
+        "correct": 79,
+        "accuracy": 0.3038461538461538,
+        "mean_margin": -0.0013786368645154513,
+        "mean_rank": 2.4076923076923076,
+        "median_margin": -0.0013926327228546143,
+        "pass_rate": 0.3038461538461538,
+        "q10_margin": -0.006752151250839233,
+        "q90_margin": 0.0023109018802642814
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 260,
+          "correct": 79,
+          "accuracy": 0.3038461538461538,
+          "mean_margin": -0.0013786368645154513,
+          "mean_rank": 2.4076923076923076,
+          "median_margin": -0.0013926327228546143,
+          "pass_rate": 0.3038461538461538,
+          "q10_margin": -0.006752151250839233,
+          "q90_margin": 0.0023109018802642814
+        }
+      }
+    }
+  ],
+  "summary": {
+    "S10000": {
+      "mean_accuracy": 0.3153846153846154,
+      "std_accuracy": 0.007692307692307693,
+      "mean_margin": -0.0014025252598982591,
+      "n_seeds": 2
+    },
+    "S20000": {
+      "mean_accuracy": 0.2846153846153846,
+      "std_accuracy": 0.0038461538461538325,
+      "mean_margin": -0.0018252303967109093,
+      "n_seeds": 2
+    },
+    "S5000": {
+      "mean_accuracy": 0.3096153846153846,
+      "std_accuracy": 0.0057692307692307765,
+      "mean_margin": -0.0011811610597830553,
+      "n_seeds": 2
+    }
+  }
+}

@@ -65,6 +65,8 @@ capsules/
 # Large data files (use Releases for distribution)
 *.jsonl
 !examples/*.jsonl
+!evidence/*.jsonl
+evidence/dress_rehearsal_bundles.jsonl
 !**/.gitkeep
 
 # Results (keep structure via .gitkeep)

@@ -1,0 +1,481 @@
+{
+  "eval_header": {
+    "_header": true,
+    "source_bundles": "/root/QUANTUM_BWD/paradigm_factory/v2/bundles_v23/tier3_organic_holdout100.jsonl",
+    "eval_count": 100,
+    "tier_counts": {
+      "tier3_adversarial": 100
+    }
+  },
+  "eval_path": "/root/QUANTUM_BWD/evals/organic_holdout_eval.jsonl",
+  "device": "cuda",
+  "capsules": [
+    {
+      "condition": "R65_25_10",
+      "seed": 123,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R65_25_10/seed_123",
+      "overall": {
+        "n": 100,
+        "correct": 33,
+        "accuracy": 0.33,
+        "mean_margin": -0.001525985598564148,
+        "mean_rank": 2.43,
+        "median_margin": -0.002064526081085205,
+        "pass_rate": 0.33,
+        "q10_margin": -0.008697503805160522,
+        "q90_margin": 0.004482686519622806
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 33,
+          "accuracy": 0.33,
+          "mean_margin": -0.001525985598564148,
+          "mean_rank": 2.43,
+          "median_margin": -0.002064526081085205,
+          "pass_rate": 0.33,
+          "q10_margin": -0.008697503805160522,
+          "q90_margin": 0.004482686519622806
+        }
+      }
+    },
+    {
+      "condition": "R65_25_10",
+      "seed": 42,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R65_25_10/seed_42",
+      "overall": {
+        "n": 100,
+        "correct": 34,
+        "accuracy": 0.34,
+        "mean_margin": -0.0005902445316314697,
+        "mean_rank": 2.23,
+        "median_margin": -0.0012593865394592285,
+        "pass_rate": 0.34,
+        "q10_margin": -0.007148605585098266,
+        "q90_margin": 0.0037402868270874096
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 34,
+          "accuracy": 0.34,
+          "mean_margin": -0.0005902445316314697,
+          "mean_rank": 2.23,
+          "median_margin": -0.0012593865394592285,
+          "pass_rate": 0.34,
+          "q10_margin": -0.007148605585098266,
+          "q90_margin": 0.0037402868270874096
+        }
+      }
+    },
+    {
+      "condition": "R65_25_10",
+      "seed": 456,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R65_25_10/seed_456",
+      "overall": {
+        "n": 100,
+        "correct": 36,
+        "accuracy": 0.36,
+        "mean_margin": -0.001574782133102417,
+        "mean_rank": 2.35,
+        "median_margin": -0.0017782151699066162,
+        "pass_rate": 0.36,
+        "q10_margin": -0.01498315930366516,
+        "q90_margin": 0.00376281738281252
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 36,
+          "accuracy": 0.36,
+          "mean_margin": -0.001574782133102417,
+          "mean_rank": 2.35,
+          "median_margin": -0.0017782151699066162,
+          "pass_rate": 0.36,
+          "q10_margin": -0.01498315930366516,
+          "q90_margin": 0.00376281738281252
+        }
+      }
+    },
+    {
+      "condition": "R70_20_10",
+      "seed": 123,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R70_20_10/seed_123",
+      "overall": {
+        "n": 100,
+        "correct": 32,
+        "accuracy": 0.32,
+        "mean_margin": -0.0008406102657318115,
+        "mean_rank": 2.48,
+        "median_margin": -0.0012679994106292725,
+        "pass_rate": 0.32,
+        "q10_margin": -0.006713080406188965,
+        "q90_margin": 0.003538745641708374
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 32,
+          "accuracy": 0.32,
+          "mean_margin": -0.0008406102657318115,
+          "mean_rank": 2.48,
+          "median_margin": -0.0012679994106292725,
+          "pass_rate": 0.32,
+          "q10_margin": -0.006713080406188965,
+          "q90_margin": 0.003538745641708374
+        }
+      }
+    },
+    {
+      "condition": "R70_20_10",
+      "seed": 42,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R70_20_10/seed_42",
+      "overall": {
+        "n": 100,
+        "correct": 34,
+        "accuracy": 0.34,
+        "mean_margin": -0.0001988375186920166,
+        "mean_rank": 2.31,
+        "median_margin": -0.0006897449493408203,
+        "pass_rate": 0.34,
+        "q10_margin": -0.006393146514892578,
+        "q90_margin": 0.004117041826248171
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 34,
+          "accuracy": 0.34,
+          "mean_margin": -0.0001988375186920166,
+          "mean_rank": 2.31,
+          "median_margin": -0.0006897449493408203,
+          "pass_rate": 0.34,
+          "q10_margin": -0.006393146514892578,
+          "q90_margin": 0.004117041826248171
+        }
+      }
+    },
+    {
+      "condition": "R70_20_10",
+      "seed": 456,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R70_20_10/seed_456",
+      "overall": {
+        "n": 100,
+        "correct": 35,
+        "accuracy": 0.35,
+        "mean_margin": -0.004519771337509155,
+        "mean_rank": 2.35,
+        "median_margin": -0.005767762660980225,
+        "pass_rate": 0.35,
+        "q10_margin": -0.025459307432174682,
+        "q90_margin": 0.011057943105697647
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 35,
+          "accuracy": 0.35,
+          "mean_margin": -0.004519771337509155,
+          "mean_rank": 2.35,
+          "median_margin": -0.005767762660980225,
+          "pass_rate": 0.35,
+          "q10_margin": -0.025459307432174682,
+          "q90_margin": 0.011057943105697647
+        }
+      }
+    },
+    {
+      "condition": "R75_15_10",
+      "seed": 123,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R75_15_10/seed_123",
+      "overall": {
+        "n": 100,
+        "correct": 33,
+        "accuracy": 0.33,
+        "mean_margin": -0.0009571367502212525,
+        "mean_rank": 2.33,
+        "median_margin": -0.0015333294868469238,
+        "pass_rate": 0.33,
+        "q10_margin": -0.006798630952835083,
+        "q90_margin": 0.0032788455486297643
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 33,
+          "accuracy": 0.33,
+          "mean_margin": -0.0009571367502212525,
+          "mean_rank": 2.33,
+          "median_margin": -0.0015333294868469238,
+          "pass_rate": 0.33,
+          "q10_margin": -0.006798630952835083,
+          "q90_margin": 0.0032788455486297643
+        }
+      }
+    },
+    {
+      "condition": "R75_15_10",
+      "seed": 42,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R75_15_10/seed_42",
+      "overall": {
+        "n": 100,
+        "correct": 32,
+        "accuracy": 0.32,
+        "mean_margin": -0.0005026781558990479,
+        "mean_rank": 2.44,
+        "median_margin": -0.001131504774093628,
+        "pass_rate": 0.32,
+        "q10_margin": -0.005224144458770751,
+        "q90_margin": 0.0022896528244018555
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 32,
+          "accuracy": 0.32,
+          "mean_margin": -0.0005026781558990479,
+          "mean_rank": 2.44,
+          "median_margin": -0.001131504774093628,
+          "pass_rate": 0.32,
+          "q10_margin": -0.005224144458770751,
+          "q90_margin": 0.0022896528244018555
+        }
+      }
+    },
+    {
+      "condition": "R75_15_10",
+      "seed": 456,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R75_15_10/seed_456",
+      "overall": {
+        "n": 100,
+        "correct": 36,
+        "accuracy": 0.36,
+        "mean_margin": -0.0032561832666397096,
+        "mean_rank": 2.41,
+        "median_margin": -0.0051965415477752686,
+        "pass_rate": 0.36,
+        "q10_margin": -0.02322576642036438,
+        "q90_margin": 0.010201644897460949
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 36,
+          "accuracy": 0.36,
+          "mean_margin": -0.0032561832666397096,
+          "mean_rank": 2.41,
+          "median_margin": -0.0051965415477752686,
+          "pass_rate": 0.36,
+          "q10_margin": -0.02322576642036438,
+          "q90_margin": 0.010201644897460949
+        }
+      }
+    },
+    {
+      "condition": "R80_15_5",
+      "seed": 123,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R80_15_5/seed_123",
+      "overall": {
+        "n": 100,
+        "correct": 28,
+        "accuracy": 0.28,
+        "mean_margin": -0.001007353663444519,
+        "mean_rank": 2.4,
+        "median_margin": -0.001436084508895874,
+        "pass_rate": 0.28,
+        "q10_margin": -0.005513435602188111,
+        "q90_margin": 0.0031223177909851106
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 28,
+          "accuracy": 0.28,
+          "mean_margin": -0.001007353663444519,
+          "mean_rank": 2.4,
+          "median_margin": -0.001436084508895874,
+          "pass_rate": 0.28,
+          "q10_margin": -0.005513435602188111,
+          "q90_margin": 0.0031223177909851106
+        }
+      }
+    },
+    {
+      "condition": "R80_15_5",
+      "seed": 42,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R80_15_5/seed_42",
+      "overall": {
+        "n": 100,
+        "correct": 34,
+        "accuracy": 0.34,
+        "mean_margin": -0.0005286145210266113,
+        "mean_rank": 2.29,
+        "median_margin": -0.0010305047035217285,
+        "pass_rate": 0.34,
+        "q10_margin": -0.0038500428199768066,
+        "q90_margin": 0.0019807279109954846
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 34,
+          "accuracy": 0.34,
+          "mean_margin": -0.0005286145210266113,
+          "mean_rank": 2.29,
+          "median_margin": -0.0010305047035217285,
+          "pass_rate": 0.34,
+          "q10_margin": -0.0038500428199768066,
+          "q90_margin": 0.0019807279109954846
+        }
+      }
+    },
+    {
+      "condition": "R80_15_5",
+      "seed": 456,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R80_15_5/seed_456",
+      "overall": {
+        "n": 100,
+        "correct": 31,
+        "accuracy": 0.31,
+        "mean_margin": -0.005378788709640503,
+        "mean_rank": 2.43,
+        "median_margin": -0.0070188045501708984,
+        "pass_rate": 0.31,
+        "q10_margin": -0.030153506994247434,
+        "q90_margin": 0.012637472152709987
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 31,
+          "accuracy": 0.31,
+          "mean_margin": -0.005378788709640503,
+          "mean_rank": 2.43,
+          "median_margin": -0.0070188045501708984,
+          "pass_rate": 0.31,
+          "q10_margin": -0.030153506994247434,
+          "q90_margin": 0.012637472152709987
+        }
+      }
+    },
+    {
+      "condition": "R85_10_5",
+      "seed": 123,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R85_10_5/seed_123",
+      "overall": {
+        "n": 100,
+        "correct": 35,
+        "accuracy": 0.35,
+        "mean_margin": -0.0009858793020248414,
+        "mean_rank": 2.37,
+        "median_margin": -0.0011201798915863037,
+        "pass_rate": 0.35,
+        "q10_margin": -0.0050269484519958494,
+        "q90_margin": 0.0015421509742736816
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 35,
+          "accuracy": 0.35,
+          "mean_margin": -0.0009858793020248414,
+          "mean_rank": 2.37,
+          "median_margin": -0.0011201798915863037,
+          "pass_rate": 0.35,
+          "q10_margin": -0.0050269484519958494,
+          "q90_margin": 0.0015421509742736816
+        }
+      }
+    },
+    {
+      "condition": "R85_10_5",
+      "seed": 42,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R85_10_5/seed_42",
+      "overall": {
+        "n": 100,
+        "correct": 31,
+        "accuracy": 0.31,
+        "mean_margin": -0.0010596740245819092,
+        "mean_rank": 2.4,
+        "median_margin": -0.0017810463905334473,
+        "pass_rate": 0.31,
+        "q10_margin": -0.009573060274124145,
+        "q90_margin": 0.004494369029998779
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 31,
+          "accuracy": 0.31,
+          "mean_margin": -0.0010596740245819092,
+          "mean_rank": 2.4,
+          "median_margin": -0.0017810463905334473,
+          "pass_rate": 0.31,
+          "q10_margin": -0.009573060274124145,
+          "q90_margin": 0.004494369029998779
+        }
+      }
+    },
+    {
+      "condition": "R85_10_5",
+      "seed": 456,
+      "capsule_dir": "/root/QUANTUM_BWD/results/ratio_sweep/R85_10_5/seed_456",
+      "overall": {
+        "n": 100,
+        "correct": 32,
+        "accuracy": 0.32,
+        "mean_margin": -0.006842446923255921,
+        "mean_rank": 2.47,
+        "median_margin": -0.008356302976608276,
+        "pass_rate": 0.32,
+        "q10_margin": -0.03598495125770569,
+        "q90_margin": 0.017761451005935673
+      },
+      "by_tier": {
+        "tier3_adversarial": {
+          "n": 100,
+          "correct": 32,
+          "accuracy": 0.32,
+          "mean_margin": -0.006842446923255921,
+          "mean_rank": 2.47,
+          "median_margin": -0.008356302976608276,
+          "pass_rate": 0.32,
+          "q10_margin": -0.03598495125770569,
+          "q90_margin": 0.017761451005935673
+        }
+      }
+    }
+  ],
+  "summary": {
+    "R65_25_10": {
+      "mean_accuracy": 0.3433333333333333,
+      "std_accuracy": 0.012472191289246459,
+      "mean_margin": -0.0012303374210993448,
+      "n_seeds": 3
+    },
+    "R70_20_10": {
+      "mean_accuracy": 0.33666666666666667,
+      "std_accuracy": 0.012472191289246462,
+      "mean_margin": -0.0018530730406443278,
+      "n_seeds": 3
+    },
+    "R75_15_10": {
+      "mean_accuracy": 0.33666666666666667,
+      "std_accuracy": 0.016996731711975938,
+      "mean_margin": -0.0015719993909200033,
+      "n_seeds": 3
+    },
+    "R80_15_5": {
+      "mean_accuracy": 0.31000000000000005,
+      "std_accuracy": 0.02449489742783178,
+      "mean_margin": -0.002304918964703878,
+      "n_seeds": 3
+    },
+    "R85_10_5": {
+      "mean_accuracy": 0.32666666666666666,
+      "std_accuracy": 0.01699673171197594,
+      "mean_margin": -0.0029626667499542242,
+      "n_seeds": 3
+    }
+  }
+}

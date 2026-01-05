@@ -1,0 +1,345 @@
+{
+  "eval_header": {
+    "_header": true,
+    "source_bundles": "paradigm_factory\\v2\\bundles_v23\\contrastive_bundles.jsonl",
+    "source_sha256": "1c343a2d2e440837c304059e966cad391e96c81d34e6bfbd2c4d2874300d84b0",
+    "eval_seed": 42,
+    "eval_count": 3786,
+    "tier_counts": {
+      "tier2_robust": 1666,
+      "tier3_adversarial": 454,
+      "tier1_easy": 1666
+    },
+    "content_hash": "90a139b1537c80f2"
+  },
+  "eval_path": "/root/QUANTUM_BWD/evals/eval_v23_contrastive_5k.jsonl",
+  "device": "cuda",
+  "capsules": [
+    {
+      "condition": "S10000",
+      "seed": 123,
+      "capsule_dir": "/root/QUANTUM_BWD/results/step_sweep/S10000/seed_123",
+      "overall": {
+        "n": 3786,
+        "correct": 1106,
+        "accuracy": 0.29212889593238245,
+        "mean_margin": -0.0017673373537219774,
+        "mean_rank": 2.7165874273639727,
+        "median_margin": -0.0012874901294708252,
+        "pass_rate": 0.29212889593238245,
+        "q10_margin": -0.005891948938369751,
+        "q90_margin": 0.0018598437309265137
+      },
+      "by_tier": {
+        "tier2_robust": {
+          "n": 1666,
+          "correct": 480,
+          "accuracy": 0.28811524609843936,
+          "mean_margin": -0.0017358773753565757,
+          "mean_rank": 2.7797118847539015,
+          "median_margin": -0.0013009905815124512,
+          "pass_rate": 0.28811524609843936,
+          "q10_margin": -0.005866706371307373,
+          "q90_margin": 0.0019578635692596436
+        },
+        "tier3_adversarial": {
+          "n": 454,
+          "correct": 146,
+          "accuracy": 0.32158590308370044,
+          "mean_margin": -0.0013305023640788074,
+          "mean_rank": 2.488986784140969,
+          "median_margin": -0.0010526180267333984,
+          "pass_rate": 0.32158590308370044,
+          "q10_margin": -0.005681627988815307,
+          "q90_margin": 0.002196079492568969
+        },
+        "tier1_easy": {
+          "n": 1666,
+          "correct": 480,
+          "accuracy": 0.28811524609843936,
+          "mean_margin": -0.0019178387998532848,
+          "mean_rank": 2.715486194477791,
+          "median_margin": -0.0013521015644073486,
+          "pass_rate": 0.28811524609843936,
+          "q10_margin": -0.0060370564460754395,
+          "q90_margin": 0.001630932092666626
+        }
+      }
+    },
+    {
+      "condition": "S10000",
+      "seed": 42,
+      "capsule_dir": "/root/QUANTUM_BWD/results/step_sweep/S10000/seed_42",
+      "overall": {
+        "n": 3786,
+        "correct": 1092,
+        "accuracy": 0.2884310618066561,
+        "mean_margin": -0.0019610340766533932,
+        "mean_rank": 2.774432118330692,
+        "median_margin": -0.0014093518257141113,
+        "pass_rate": 0.2884310618066561,
+        "q10_margin": -0.00633808970451355,
+        "q90_margin": 0.0018304884433746338
+      },
+      "by_tier": {
+        "tier2_robust": {
+          "n": 1666,
+          "correct": 490,
+          "accuracy": 0.29411764705882354,
+          "mean_margin": -0.0020181852944043217,
+          "mean_rank": 2.8409363745498197,
+          "median_margin": -0.0014738738536834717,
+          "pass_rate": 0.29411764705882354,
+          "q10_margin": -0.006393551826477051,
+          "q90_margin": 0.0017884373664855957
+        },
+        "tier3_adversarial": {
+          "n": 454,
+          "correct": 144,
+          "accuracy": 0.31718061674008813,
+          "mean_margin": -0.001425000539435164,
+          "mean_rank": 2.5,
+          "median_margin": -0.0011424422264099121,
+          "pass_rate": 0.31718061674008813,
+          "q10_margin": -0.0061674416065216064,
+          "q90_margin": 0.0023580491542816158
+        },
+        "tier1_easy": {
+          "n": 1666,
+          "correct": 458,
+          "accuracy": 0.27490996398559425,
+          "mean_margin": -0.0020499568240267604,
+          "mean_rank": 2.7827130852340938,
+          "median_margin": -0.00143355131149292,
+          "pass_rate": 0.27490996398559425,
+          "q10_margin": -0.00638696551322937,
+          "q90_margin": 0.0016895532608032227
+        }
+      }
+    },
+    {
+      "condition": "S20000",
+      "seed": 123,
+      "capsule_dir": "/root/QUANTUM_BWD/results/step_sweep/S20000/seed_123",
+      "overall": {
+        "n": 3786,
+        "correct": 1106,
+        "accuracy": 0.29212889593238245,
+        "mean_margin": -0.0018299003631049718,
+        "mean_rank": 2.7020602218700476,
+        "median_margin": -0.00130540132522583,
+        "pass_rate": 0.29212889593238245,
+        "q10_margin": -0.006268918514251709,
+        "q90_margin": 0.0020649731159210205
+      },
+      "by_tier": {
+        "tier2_robust": {
+          "n": 1666,
+          "correct": 492,
+          "accuracy": 0.29531812725090034,
+          "mean_margin": -0.0017752162262457474,
+          "mean_rank": 2.747298919567827,
+          "median_margin": -0.0012905597686767578,
+          "pass_rate": 0.29531812725090034,
+          "q10_margin": -0.006236463785171509,
+          "q90_margin": 0.002161741256713867
+        },
+        "tier3_adversarial": {
+          "n": 454,
+          "correct": 144,
+          "accuracy": 0.31718061674008813,
+          "mean_margin": -0.001251530542247621,
+          "mean_rank": 2.433920704845815,
+          "median_margin": -0.0010578036308288574,
+          "pass_rate": 0.31718061674008813,
+          "q10_margin": -0.00576300024986267,
+          "q90_margin": 0.002384817600250244
+        },
+        "tier1_easy": {
+          "n": 1666,
+          "correct": 470,
+          "accuracy": 0.28211284513805523,
+          "mean_margin": -0.0020421954835591768,
+          "mean_rank": 2.729891956782713,
+          "median_margin": -0.0013930201530456543,
+          "pass_rate": 0.28211284513805523,
+          "q10_margin": -0.006495922803878784,
+          "q90_margin": 0.0018668174743652344
+        }
+      }
+    },
+    {
+      "condition": "S20000",
+      "seed": 42,
+      "capsule_dir": "/root/QUANTUM_BWD/results/step_sweep/S20000/seed_42",
+      "overall": {
+        "n": 3786,
+        "correct": 1102,
+        "accuracy": 0.2910723718964606,
+        "mean_margin": -0.002618344448510768,
+        "mean_rank": 2.74986793449551,
+        "median_margin": -0.001882314682006836,
+        "pass_rate": 0.2910723718964606,
+        "q10_margin": -0.008959263563156128,
+        "q90_margin": 0.0028744637966156006
+      },
+      "by_tier": {
+        "tier2_robust": {
+          "n": 1666,
+          "correct": 488,
+          "accuracy": 0.2929171668667467,
+          "mean_margin": -0.0026081934267160843,
+          "mean_rank": 2.796518607442977,
+          "median_margin": -0.00196191668510437,
+          "pass_rate": 0.2929171668667467,
+          "q10_margin": -0.009170174598693848,
+          "q90_margin": 0.0029723644256591797
+        },
+        "tier3_adversarial": {
+          "n": 454,
+          "correct": 147,
+          "accuracy": 0.3237885462555066,
+          "mean_margin": -0.00167313861426803,
+          "mean_rank": 2.473568281938326,
+          "median_margin": -0.0013850927352905273,
+          "pass_rate": 0.3237885462555066,
+          "q10_margin": -0.0077006638050079335,
+          "q90_margin": 0.00364142060279846
+        },
+        "tier1_easy": {
+          "n": 1666,
+          "correct": 467,
+          "accuracy": 0.28031212484994,
+          "mean_margin": -0.0028860725703932087,
+          "mean_rank": 2.778511404561825,
+          "median_margin": -0.0019456148147583008,
+          "pass_rate": 0.28031212484994,
+          "q10_margin": -0.009111106395721436,
+          "q90_margin": 0.0026294291019439697
+        }
+      }
+    },
+    {
+      "condition": "S5000",
+      "seed": 123,
+      "capsule_dir": "/root/QUANTUM_BWD/results/step_sweep/S5000/seed_123",
+      "overall": {
+        "n": 3786,
+        "correct": 1082,
+        "accuracy": 0.28578975171685156,
+        "mean_margin": -0.0013043781279006208,
+        "mean_rank": 2.753565768621236,
+        "median_margin": -0.0009047091007232666,
+        "pass_rate": 0.28578975171685156,
+        "q10_margin": -0.004368335008621216,
+        "q90_margin": 0.001271575689315796
+      },
+      "by_tier": {
+        "tier2_robust": {
+          "n": 1666,
+          "correct": 466,
+          "accuracy": 0.2797118847539016,
+          "mean_margin": -0.0013162943781638633,
+          "mean_rank": 2.828331332533013,
+          "median_margin": -0.0009381473064422607,
+          "pass_rate": 0.2797118847539016,
+          "q10_margin": -0.004423409700393677,
+          "q90_margin": 0.0012495815753936768
+        },
+        "tier3_adversarial": {
+          "n": 454,
+          "correct": 138,
+          "accuracy": 0.3039647577092511,
+          "mean_margin": -0.0010069193819020814,
+          "mean_rank": 2.5814977973568283,
+          "median_margin": -0.00080108642578125,
+          "pass_rate": 0.3039647577092511,
+          "q10_margin": -0.004190486669540405,
+          "q90_margin": 0.0014401733875274657
+        },
+        "tier1_easy": {
+          "n": 1666,
+          "correct": 478,
+          "accuracy": 0.28691476590636256,
+          "mean_margin": -0.0013735220641219745,
+          "mean_rank": 2.725690276110444,
+          "median_margin": -0.0008996427059173584,
+          "pass_rate": 0.28691476590636256,
+          "q10_margin": -0.004331707954406738,
+          "q90_margin": 0.0012184977531433105
+        }
+      }
+    },
+    {
+      "condition": "S5000",
+      "seed": 42,
+      "capsule_dir": "/root/QUANTUM_BWD/results/step_sweep/S5000/seed_42",
+      "overall": {
+        "n": 3786,
+        "correct": 1064,
+        "accuracy": 0.2810353935552034,
+        "mean_margin": -0.001819930313380383,
+        "mean_rank": 2.77892234548336,
+        "median_margin": -0.0011980235576629639,
+        "pass_rate": 0.2810353935552034,
+        "q10_margin": -0.005936741828918457,
+        "q90_margin": 0.0017071068286895752
+      },
+      "by_tier": {
+        "tier2_robust": {
+          "n": 1666,
+          "correct": 464,
+          "accuracy": 0.2785114045618247,
+          "mean_margin": -0.0018724335842773695,
+          "mean_rank": 2.8427370948379354,
+          "median_margin": -0.001299530267715454,
+          "pass_rate": 0.2785114045618247,
+          "q10_margin": -0.006068378686904907,
+          "q90_margin": 0.0017676353454589844
+        },
+        "tier3_adversarial": {
+          "n": 454,
+          "correct": 136,
+          "accuracy": 0.29955947136563876,
+          "mean_margin": -0.0013884639424899601,
+          "mean_rank": 2.5682819383259914,
+          "median_margin": -0.0010190308094024658,
+          "pass_rate": 0.29955947136563876,
+          "q10_margin": -0.006001681089401245,
+          "q90_margin": 0.002075886726379394
+        },
+        "tier1_easy": {
+          "n": 1666,
+          "correct": 464,
+          "accuracy": 0.2785114045618247,
+          "mean_margin": -0.0018850055133022752,
+          "mean_rank": 2.7725090036014404,
+          "median_margin": -0.0011816024780273438,
+          "pass_rate": 0.2785114045618247,
+          "q10_margin": -0.0057540833950042725,
+          "q90_margin": 0.0015231072902679443
+        }
+      }
+    }
+  ],
+  "summary": {
+    "S10000": {
+      "mean_accuracy": 0.2902799788695193,
+      "std_accuracy": 0.0018489170628631646,
+      "mean_margin": -0.0018641857151876853,
+      "n_seeds": 2
+    },
+    "S20000": {
+      "mean_accuracy": 0.29160063391442154,
+      "std_accuracy": 0.0005282620179609121,
+      "mean_margin": -0.0022241224058078698,
+      "n_seeds": 2
+    },
+    "S5000": {
+      "mean_accuracy": 0.2834125726360275,
+      "std_accuracy": 0.0023771790808240767,
+      "mean_margin": -0.001562154220640502,
+      "n_seeds": 2
+    }
+  }
+}
