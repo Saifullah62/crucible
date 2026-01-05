@@ -74,7 +74,7 @@ POLYSEMOUS_WORDS = {
 
 
 def generate_bundle(word: str, senses: list, tier: str, bundle_id: int) -> dict:
-    """Generate a single training bundle."""
+    """Generate a single training bundle in train_curriculum_v3.py format."""
     # Pick anchor sense
     anchor_idx = random.randint(0, len(senses) - 1)
     anchor_sense, anchor_example = senses[anchor_idx]
@@ -96,26 +96,28 @@ def generate_bundle(word: str, senses: list, tier: str, bundle_id: int) -> dict:
                 f"In this context, '{word}' refers to {sense}.",
                 example,
             ]
-            negatives.append(random.choice(neg_templates))
+            negatives.append({"text": random.choice(neg_templates)})
 
     # Pad negatives if needed (minimum 2)
     while len(negatives) < 2:
-        negatives.append(f"Unrelated: The weather is nice today.")
+        negatives.append({"text": "Unrelated: The weather is nice today."})
 
     return {
         "bundle_id": f"mini_{bundle_id:04d}",
-        "anchor": anchor_example,
-        "positive": positive,
+        "anchor": {"text": anchor_example},
+        "positive": {"text": positive},
         "negatives": negatives[:5],  # Cap at 5 negatives
-        "tier": tier,
-        "word": word,
-        "anchor_sense": anchor_sense,
-        "source": "synthetic_minicorpus",
+        "metadata": {
+            "difficulty_tier": tier,  # Already in correct format
+            "word": word,
+            "anchor_sense": anchor_sense,
+            "source": "synthetic_minicorpus",
+        },
     }
 
 
 def generate_eval_item(word: str, senses: list, item_id: int, eval_type: str) -> dict:
-    """Generate a single eval item."""
+    """Generate a single eval item in eval_capsules.py format."""
     anchor_idx = random.randint(0, len(senses) - 1)
     anchor_sense, anchor_example = senses[anchor_idx]
 
@@ -128,13 +130,13 @@ def generate_eval_item(word: str, senses: list, item_id: int, eval_type: str) ->
             negatives.append(f"'{word}' meaning: {sense}")
 
     while len(negatives) < 2:
-        negatives.append(f"Completely unrelated concept")
+        negatives.append("Completely unrelated concept")
 
     return {
         "item_id": f"{eval_type}_{item_id:04d}",
-        "anchor": anchor_example,
-        "positive": positive,
-        "negatives": negatives[:5],
+        "anchor_text": anchor_example,
+        "positive_text": positive,
+        "negative_texts": negatives[:5],
         "word": word,
         "expected_sense": anchor_sense,
         "tier": "tier3_adversarial" if eval_type == "frozen" else "organic",
@@ -151,7 +153,7 @@ def main():
     bundle_id = 0
 
     # Tier distribution: 60% tier1, 30% tier2, 10% tier3
-    tier_counts = {"tier1": 96, "tier2": 48, "tier3_adversarial": 16}
+    tier_counts = {"tier1_easy": 96, "tier2_medium": 48, "tier3_adversarial": 16}
 
     words = list(POLYSEMOUS_WORDS.keys())
 
