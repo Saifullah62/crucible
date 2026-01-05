@@ -64,6 +64,7 @@ capsules/
 
 # Large data files (use Releases for distribution)
 *.jsonl
+!examples/*.jsonl
 !**/.gitkeep
 
 # Results (keep structure via .gitkeep)

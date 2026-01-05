@@ -1,0 +1,149 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  # Enforce clean core - no generated artifacts
+  artifact-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for forbidden artifact extensions
+        run: |
+          echo "Checking for forbidden artifacts..."
+          FORBIDDEN=0
+
+          # Check for model checkpoints
+          if find . -name "*.pt" -o -name "*.pth" -o -name "*.ckpt" -o -name "*.bin" | grep -v ".git" | head -1 | grep -q .; then
+            echo "❌ Found model checkpoint files (*.pt, *.pth, *.ckpt, *.bin)"
+            find . -name "*.pt" -o -name "*.pth" -o -name "*.ckpt" -o -name "*.bin" | grep -v ".git"
+            FORBIDDEN=1
+          fi
+
+          # Check for large data files (excluding examples/)
+          if find . -path ./examples -prune -o -name "*.jsonl" -print | grep -v ".git" | head -1 | grep -q .; then
+            echo "❌ Found .jsonl files outside examples/"
+            find . -path ./examples -prune -o -name "*.jsonl" -print | grep -v ".git"
+            FORBIDDEN=1
+          fi
+
+          # Check for log files
+          if find . -name "*.log" | grep -v ".git" | head -1 | grep -q .; then
+            echo "❌ Found log files (*.log)"
+            find . -name "*.log" | grep -v ".git"
+            FORBIDDEN=1
+          fi
+
+          # Check for results directories with content
+          if [ -d "results" ] && find results -type f ! -name ".gitkeep" ! -name "README.md" | head -1 | grep -q .; then
+            echo "❌ Found files in results/ (should only have .gitkeep)"
+            find results -type f ! -name ".gitkeep" ! -name "README.md"
+            FORBIDDEN=1
+          fi
+
+          if [ $FORBIDDEN -eq 1 ]; then
+            echo ""
+            echo "========================================"
+            echo "FAILED: Generated artifacts detected"
+            echo "========================================"
+            echo "This repo should only contain code, configs, and docs."
+            echo "Add these files to .gitignore or remove them."
+            exit 1
+          fi
+
+          echo "✅ No forbidden artifacts found"
+
+  # Run quickstart demo on CPU
+  quickstart:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install numpy scipy scikit-learn tqdm matplotlib
+
+      - name: Generate minicorpus
+        run: python examples/generate_minicorpus.py
+
+      - name: Run quickstart training (500 steps)
+        run: |
+          python scripts/train_curriculum_v3.py \
+            --bundles examples/minicorpus_bundles.jsonl \
+            --steps 500 \
+            --device cpu \
+            --output-dir results/quickstart
+
+      - name: Run frozen eval
+        run: |
+          python experiments/eval_capsules.py \
+            --eval examples/minicorpus_frozen.jsonl \
+            --results-root results/quickstart \
+            --device cpu \
+            --out results/quickstart/frozen_scoreboard.json
+
+      - name: Run organic eval
+        run: |
+          python experiments/eval_capsules.py \
+            --eval examples/minicorpus_organic.jsonl \
+            --results-root results/quickstart \
+            --device cpu \
+            --out results/quickstart/organic_scoreboard.json
+
+      - name: Verify scoreboards exist
+        run: |
+          if [ -f "results/quickstart/frozen_scoreboard.json" ] && [ -f "results/quickstart/organic_scoreboard.json" ]; then
+            echo "✅ Quickstart completed successfully"
+            echo ""
+            echo "Frozen scoreboard:"
+            cat results/quickstart/frozen_scoreboard.json | head -20
+            echo ""
+            echo "Organic scoreboard:"
+            cat results/quickstart/organic_scoreboard.json | head -20
+          else
+            echo "❌ Scoreboards not generated"
+            exit 1
+          fi
+
+  # Docs lint (from docs-ci.yml, merged here)
+  docs-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+      - name: Regenerate CURRENT_IMPLEMENTATION.md
+        run: python tools/extract_script_flags.py
+
+      - name: Check for drift
+        run: |
+          if git diff --exit-code docs/crucible/CURRENT_IMPLEMENTATION.md; then
+            echo "✅ CURRENT_IMPLEMENTATION.md is up to date"
+          else
+            echo "❌ CURRENT_IMPLEMENTATION.md has drifted"
+            echo "Run 'python tools/extract_script_flags.py' and commit"
+            exit 1
+          fi
+
+      - name: Run docs linter
+        run: python tools/docs_lint_crucible.py

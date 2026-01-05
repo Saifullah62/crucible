@@ -1,0 +1,27 @@
+# Quickstart Configuration
+# ========================
+# Minimal config for demo runs on CPU with synthetic data.
+# For production, use configs/full.json or increase steps/batch_size.
+
+data:
+  bundles: examples/minicorpus_bundles.jsonl
+  frozen_eval: examples/minicorpus_frozen.jsonl
+  organic_eval: examples/minicorpus_organic.jsonl
+
+training:
+  steps: 500          # Quick demo (production: 10000)
+  batch_size: 16      # Small for CPU (production: 32)
+  learning_rate: 1.0e-3
+  device: cpu         # Change to cuda for GPU
+
+curriculum:
+  mode: uniform
+  tier_probabilities: [0.60, 0.30, 0.10]
+  tier3_ratios:
+    legacy: 0.75
+    organic: 0.15
+    expanded: 0.10
+
+output:
+  results_dir: results/quickstart
+  checkpoint_every: 250
